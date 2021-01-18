@@ -2,4 +2,38 @@
 	body{
 		background-color: lightblue;
 	}
+	#main li{
+		width: 25%;
+		float: left;
+	}
+	#aside li{
+		width: 100%;
+	}
+	#header{
+		
+	}
+	#menu li{
+		width: 16.666%;
+		float: left;	
+	}
+	#menu{
+		overflow: hidden; /*esto se lo decimos al contenedor de los elementos flotados; para que nos contenga la información*/
+		text-align: center;
+		width: 80%;
+		margin: 0 auto;
+	}
+	#main{
+		width: 70%;
+		float: left;
+		overflow: hidden;
+	}
+	#aside{
+		width: 30%;
+		float: left;
+		overflow: hidden;
+	}
+	#footer{
+		height: 100px;
+		clear: both; /*con both nos referimos a left y right; con esto hacemos que el footer no se suba para arriba -cosa que ocurre cuando flotamos otros elementos de su alrededor- sino que se quede debajo, donde debe esta el footer*/
+	}
 }
