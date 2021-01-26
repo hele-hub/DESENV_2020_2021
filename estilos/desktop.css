@@ -46,15 +46,12 @@
 	#menu li:hover a{ /*cuando pase el raton por el menu principal, aparecerá el submenú*/
 		background-color: lightgreen;
 	}
-	/* ++++++++++ HAMBURGUESA ++++++++++ */
+	/* ++++++++++ HAMBURGUESA ++++++++++ quizas todo esto no haria falta porque tenemos el max width en las queries de la tablet*/
 	#burguer{
-		display: none; /*ESENCIAL*/
+		display: none; /*ESENCIAL PARA ESCONDER EL MENU HAMBURGUESA*/
 	}
 	.check{
-		display: none; /*ESENCIAL*/
-	}
-	.check:checked ~ #menu{ /*NO tiene que haber espacio despues de los dos puntos; con la virgulila selecciono a los elementos del mismo nivel; alt + ñ*/
-		display: none; /*ESENCIAL*/
+		display: none; /*ESENCIAL PARA ESCONDER EL MENU HAMBURGUESA*/
 	}
 	/* ++++++++++ HASTA AQUI EL MENU HAMBURGUESA ++++++++++ */
 	/* ++++++++++ MAIN ++++++++++ */
