@@ -5,16 +5,22 @@
 	/* ++++++++++ HEADER ++++++++++ */
 	#header{
 		width: 100%; /*todos los elementos que trabajan en bloque ocupan por defecto el 100% de la pantalla en posicionamiento estatico; si no ponemos esto, tambien nos pinta toda la cabecera, rosa, al 100%; ahora bien, si cambiamos el posicionamiento (en phone) si que tendriamos que darle width al header 100% porque si no se nos va a tomar por saco*/
-		/*height: 400px;*/ /*le damos esta altura fija al header para que el menu se quede por delante. Por otro lado, con posicionamiento estático no necesitamos medidas*/
+		height: 100px; /*le damos esta altura fija al header para que el menu se quede por delante. Por otro lado, con posicionamiento estático no necesitamos medidas*/
 		background-color: pink;
+	}
+	#header h1{
+		float: none;
+		width: 100%;
 	}
 	#menu{
 		overflow: hidden; /*esto se lo decimos al contenedor de los elementos flotados; para que nos contenga la información*/
 		text-align: center;
-		width: 90%;
+		width: 70%;
 		margin: 0 auto;
 		height: 100px;
 		position: relative;
+		top: 0px;
+		left: 0;
 	}
 	#menu > li{ /*afecta a todos los li del menu*/
 		width: 16.666%;
@@ -40,6 +46,17 @@
 	#menu li:hover a{ /*cuando pase el raton por el menu principal, aparecerá el submenú*/
 		background-color: lightgreen;
 	}
+	/* ++++++++++ HAMBURGUESA ++++++++++ */
+	#burguer{
+		display: none; /*ESENCIAL*/
+	}
+	.check{
+		display: none; /*ESENCIAL*/
+	}
+	.check:checked ~ #menu{ /*NO tiene que haber espacio despues de los dos puntos; con la virgulila selecciono a los elementos del mismo nivel; alt + ñ*/
+		display: none; /*ESENCIAL*/
+	}
+	/* ++++++++++ HASTA AQUI EL MENU HAMBURGUESA ++++++++++ */
 	/* ++++++++++ MAIN ++++++++++ */
 	#main{
 		width: 70%;
