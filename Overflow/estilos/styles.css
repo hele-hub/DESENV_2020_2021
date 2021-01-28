@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*importante para trabajar con medidas fluidas*/
+}
+body{
+	height: 100vh; /*importante marcarlo con VH, pues significa "la medida del dispositivo". En este caso el body nos hace de contenedor y queremos que este contenedor ocupe todo el alto de la pantalla del dispositivo, sea cual sea este dispositivo*/
+	font-size: 16px;
+	line-height: 32px;
+}
+.fa{ /*la clase de los iconos de fontawesome*/
+	font-size: 48px;
+	color: red;
+}
+#header{
+	height: 10vh; /*es el 10% de la altura del viewport*/
+	background-color: #DDD;
+}
+#aside{
+	height: 15vh;
+	background-color: lavender;
+	overflow-x: scroll; /*para que haga scroll horizontalmente*/
+	scrollbar-width: none; /*para esconder la barra de scroll del slider*/
+}
+#slider{
+	height: 10vh;
+	background-color: yellow;
+	width: 300vw;
+}
+.bola{
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	background-color: white;
+	border: 1px solid grey;
+	margin: 0 5px;
+	display: inline-block;
+}
+#main{
+	height: 65vh;
+	background-color: pink;
+	overflow-y: auto;
+	scrollbar-width: none; /*para que se esconda la barra de scroll en firefox*/
+}
+#main::-webkit-scrollbar, #aside::-webkit-scrollbar{ /*esto es un pseudoelemento; firefox no utiliza webkit, por eso se me sigue viendo la barra de scroll. En chrome funciona bien*/
+	display: none;
+}
+#footer{
+	height: 10vh;
+	background-color: #DDD;
+}
