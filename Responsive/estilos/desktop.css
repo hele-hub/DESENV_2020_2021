@@ -1,0 +1,83 @@
+@media screen and (min-width: 862px){ /*lo he cambiado para que se adapte a la pantalla de mi móvil; antes 769px*/
+	body{
+		background-color: lightblue;
+	}
+	/* ++++++++++ HEADER ++++++++++ */
+	#header{
+		width: 100%; /*todos los elementos que trabajan en bloque ocupan por defecto el 100% de la pantalla en posicionamiento estatico; si no ponemos esto, tambien nos pinta toda la cabecera, rosa, al 100%; ahora bien, si cambiamos el posicionamiento (en phone) si que tendriamos que darle width al header 100% porque si no se nos va a tomar por saco*/
+		height: 100px; /*le damos esta altura fija al header para que el menu se quede por delante. Por otro lado, con posicionamiento estático no necesitamos medidas*/
+		background-color: pink;
+	}
+	#header h1{
+		float: none;
+		width: 100%;
+	}
+	#menu{
+		overflow: hidden; /*esto se lo decimos al contenedor de los elementos flotados; para que nos contenga la información*/
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+		height: 100px;
+		position: relative;
+		top: 0px;
+		left: 0;
+	}
+	#menu > li{ /*afecta a todos los li del menu*/
+		width: 16.666%;
+		float: left;
+	}
+	#menu li .sub{
+		display: none;
+		position: absolute; /*lo posicionamos con respecto a #menu porque tiene espacio, tiene un ancho de 70%; no lo posicionariamos con respecto al menu li porque éste tiene un 16.66% de espacio solamente*/
+		top: 40px;
+		left: 0px;
+		width: 100%; /*siempre conectado al posicionamiento; si no cambio el posicionamiento siempre estara al 100% automaticamente, pero si cambio el posicionamiento entonces si tengo que indicar porcentajes*/
+		/*background-color: red;*/
+	}
+	#menu li .sub li{
+		/*float: left;*/ /*para que el menu se coloque en linea; width tendria que ser 20%*/
+		/*display: block;*/ /*para que el menu se ponga en bloque; el width tendría que estar al 50%: actiariamos tambien el float none*/
+		width: 20%;
+		float: left; /*para que NO flote la mitad del menu a la derecha*/
+	}
+	#menu li:hover > .sub{ /*cuando pase el raton por el menu principal, aparecerá el submenú*/
+		display: block;
+	}
+	#menu li:hover a{ /*cuando pase el raton por el menu principal, aparecerá el submenú*/
+		background-color: lightgreen;
+	}
+	/* ++++++++++ HAMBURGUESA ++++++++++ quizas todo esto no haria falta porque tenemos el max width en las queries de la tablet*/
+	#burguer{
+		display: none; /*ESENCIAL PARA ESCONDER EL MENU HAMBURGUESA*/
+	}
+	.check{
+		display: none; /*ESENCIAL PARA ESCONDER EL MENU HAMBURGUESA*/
+	}
+	/* ++++++++++ HASTA AQUI EL MENU HAMBURGUESA ++++++++++ */
+	/* ++++++++++ MAIN ++++++++++ */
+	#main{
+		width: 70%;
+		float: left;
+		overflow: hidden;
+		margin-top: 100px;
+	}
+	#main li{
+		width: 25%;
+		float: left;
+	}
+	/* ++++++++++ ASIDE ++++++++++ */
+	#aside{
+		width: 30%;
+		float: left;
+		overflow: hidden;
+		margin-top: 100px;
+	}
+	#aside li{
+		width: 100%;
+	}
+	/* ++++++++++ FOOTER ++++++++++ */
+	#footer{
+		height: 100px;
+		clear: both; /*con both nos referimos a left y right; con esto hacemos que el footer no se suba para arriba -cosa que ocurre cuando flotamos otros elementos de su alrededor- sino que se quede debajo, donde debe esta el footer*/
+	}
+}
