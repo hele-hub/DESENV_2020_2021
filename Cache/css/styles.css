@@ -6,7 +6,7 @@
 body{
 	height: 100vh; /*importante marcarlo con VH, pues significa "la medida del dispositivo". En este caso el body nos hace de contenedor y queremos que este contenedor ocupe todo el alto de la pantalla del dispositivo, sea cual sea este dispositivo*/
 	font-size: 16px;
-	line-height: 32px;
+	line-height: 20px;
 	font-family: sans-serif;
 }
 .fa{ /*la clase de los iconos de fontawesome*/
@@ -42,19 +42,24 @@ body{
 	height: 19vh;
 	overflow-x: scroll; /*para que haga scroll horizontalmente*/
 	scrollbar-width: none; /*para esconder la barra de scroll del slider*/
+	border-top: 1px solid #DDD;
 	border-bottom: 1px solid #DDD;
 }
 #slider_A{
-	height: 10vh;
+	height: 15vh;
 	width: 500vw;
-	margin: 0 10px;
+	margin-top: 10px;
 }
 .test{
 	display: inline-block;
+	padding: 0px 5px;
 }
 .test p{
 	margin: 0 5px;
 	text-align: center;
+	padding-top: 5px;
+	font-size: 12px;
+	line-height: 12px;
 }
 .bola{
 	width: 10vh;
@@ -66,7 +71,7 @@ body{
 	display: inline-block;
 }
 .user{
-	width: 10vw;
+	/*width: 10vw;*/
 	display: inline-block;
 	margin: 0px 11px;
 	text-align: center;
