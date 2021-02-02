@@ -75,33 +75,72 @@ a{
 }
 /* ++++++++++ MAIN ++++++++++ */
 #main{
-	height: 65vh;
+	height: 71vh;
 	overflow-y: auto;
 	scrollbar-width: none; /*para que se esconda la barra de scroll en firefox*/
+	position: relative;
 }
 #main::-webkit-scrollbar, #aside::-webkit-scrollbar{ /*esto es un pseudoelemento; firefox no utiliza webkit, por eso se me sigue viendo la barra de scroll. En chrome funciona bien*/
 	display: none;
 }
 h2 {
 	display: inline;
-	position: relative;
-	top: -21px;
+	position: absolute;
+	top: 20px;
 	font-size: 12px;
 }
-#burguer {
-	width: 50px;
-	height: 50px;
-	padding-top: 13px;
-	float: right;
-}
-#burguer li {
-	background-color: black;
-	width: 4px;
-	height: 4px;
-	margin: 5px auto;
-	border-radius: 15px;
-	list-style-type: none;
-}
+/* ++++++++++ HAMBURGUESA ++++++++++ */
+	/*#burguer{
+		background-color: turquoise;
+		width: 50px;
+		height: 50px;
+		padding-top: 11px;
+	}
+	#burguer li{
+		background-color: white;
+		width: 30px;
+		height: 2px;
+		margin: 5px auto;
+		border-radius: 15px;
+	}*/
+	#burguer {
+		width: 50px;
+		height: 50px;
+		padding-top: 13px;
+		float: right;
+	}
+	#burguer li {
+		background-color: black;
+		width: 4px;
+		height: 4px;
+		margin: 5px auto;
+		border-radius: 15px;
+		list-style-type: none;
+	}
+	.check{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		opacity: 0; /*si ponemos esto a cero (0), escondemos la casilla de selección; en este caso el display none no nos valdria ya que nos colapsaria el elementos completo y no nos dejaria pulsar*/
+	}
+	.check:checked ~ #menu{ /*NO tiene que haber espacio despues de los dos puntos; con la virgulila selecciono a los elementos del mismo nivel; alt + ñ*/
+		left: 0;
+		transition: 1s;
+	}
+	#menu{
+		position: absolute;
+		top: 200px;
+		right: -100%;
+		width: 100%;
+		transition: 1s;
+		text-align: center;
+		list-style: none;
+		background-color: white;
+	}
+/* ++++++++++ HASTA AQUI EL MENU HAMBURGUESA ++++++++++ */
 .logo_usuario {
 	width: 50px;
 	margin: 5px 10px 0 10px;
