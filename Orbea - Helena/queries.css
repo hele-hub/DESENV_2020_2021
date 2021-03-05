@@ -1,0 +1,86 @@
+@media screen and (max-width: 862px){
+/*++++++++++ HEADER ++++++++++*/
+header {
+    margin: 0 10px;
+    background-color: white;
+    height: 55px;
+    overflow: hidden;
+}
+#header h1{
+	width: 50%;
+	float: right;
+}
+.contenedor_iconos {
+    width: 55%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    margin-right: 5px;
+}
+/*++++++++++ MENU HAMBURGUESA ++++++++++*/
+#burguer {
+    /* background-color: turquoise; */
+    width: 20px;
+    height: 35px;
+    float: right;
+}
+#burguer li{
+	background-color: black;
+	width: 30px;
+	height: 2px;
+	margin: 5px auto;
+	border-radius: 15px;
+}
+.check{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	opacity: 0; /*con esto escondemos la casilla de selección; en este caso el display none no nos valdria ya que nos colapsaria el elementos completo y no nos dejaria pulsar*/
+}
+.check:checked ~ #menu{ /*NO tiene que haber espacio despues de los dos puntos; con la virgulila selecciono a los elementos del mismo nivel; alt + ñ*/
+	left: 0;
+	transition: 1s;
+}
+#menu{
+	position: absolute;
+	top: 40px;
+	left: -100%;
+	width: 100%;
+	transition: 1s;
+}
+ul#menu {
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+}
+#menu > li {
+    height: 13%;
+}
+#menu > li {
+    float: none;
+}
+.personalizar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    width: 100vw;
+    padding: 0;
+    border-left: none;
+    height: 46vh;
+    /* display: none; */
+    background-color: red;
+}
+/*++++++++++ MAIN ++++++++++*/
+#c2a {
+    left: 0;
+    top: 160px;
+}
+#c2a h1 {
+    margin-bottom: 25px;
+    line-height: 1;
+}
+}
